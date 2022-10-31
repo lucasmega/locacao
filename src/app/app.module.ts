@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
@@ -36,6 +37,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
+import { MainComponent } from './components/main/main.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TenantComponent } from './components/tenant/tenant/tenant.component';
 import { SingInComponent } from './components/auth/sing-in/sing-in.component';
 import { PropertyComponent } from './components/property/property/property.component';
@@ -47,7 +52,11 @@ import { PropertyOwnerComponent } from './components/property-owner/property-own
     PropertyComponent,
     PropertyOwnerComponent,
     TenantComponent,
-    SingInComponent
+    SingInComponent,
+    MainComponent,
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -82,9 +91,33 @@ import { PropertyOwnerComponent } from './components/property-owner/property-own
     MatProgressBarModule,
     MatAutocompleteModule,
     MatButtonToggleModule,
+    BrowserAnimationsModule,
     MatProgressSpinnerModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+    MatListModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatInputModule,
+    MatRadioModule,
+    MatButtonModule,
+    MatChipsModule,
+    MatTableModule,
+    MatSelectModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatTooltipModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatDatepickerModule
+  ],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR'},
+  ],
+  bootstrap: [AppComponent],
+  schemas: [
+		CUSTOM_ELEMENTS_SCHEMA
+	]
 })
 export class AppModule { }

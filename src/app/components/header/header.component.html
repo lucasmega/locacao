@@ -1,0 +1,6 @@
+<div class="w3-teal">
+    <button #sidebar id="openNav" class="w3-button w3-teal w3-xlarge" (click)="toogle()">
+        <span *ngIf="!isOpen">&#9776;</span>
+        <span class="btn-closed" *ngIf="isOpen">&times;</span>
+    </button>
+</div>
