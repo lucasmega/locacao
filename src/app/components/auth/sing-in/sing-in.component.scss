@@ -1,0 +1,68 @@
+body {
+    
+    height: 100%;
+    display: flex;
+    padding-top: 40px;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../assets/image/low-angle-view-of-skyscrapers.jpg");
+
+    .form-signin {
+        opacity: 0.8;
+        padding: 15px;
+        max-width: 330px;
+        background-color: #fff;
+        h1 {
+            font-size: 28px;
+            font-weight: 100;
+            margin-top: 10px;
+            text-transform: uppercase;
+            color: #6c757d !important;
+        }
+
+        .m-auto {
+            margin: auto !important;
+        }
+
+        .form-floating {
+            position: relative;
+        }
+
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .mb-3 {
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        [type=button]:not(:disabled),
+        [type=reset]:not(:disabled),
+        [type=submit]:not(:disabled),
+        button:not(:disabled) {
+            cursor: pointer;
+        }
+
+        .text-muted {
+            --bs-text-opacity: 1;
+            color: #6c757d !important;
+        }
+
+        .mt-5 {
+            margin-top: 1rem !important;
+        }
+    }
+
+
+}
